@@ -5,6 +5,7 @@ import 'package:web_dashboard/models/Athlete.dart';
 import 'package:web_dashboard/models/Coach.dart';
 import 'package:web_dashboard/models/Coach.dart';
 import 'package:web_dashboard/services/userservice.dart';
+import 'Nutration.dart';
 import 'profile.dart';
 
 class MyApp extends StatelessWidget {
@@ -130,7 +131,14 @@ class _AthleteCardState extends State<AthleteCard> {
                     ),
                     IconButton(
                       icon: Icon(Icons.restaurant_menu_outlined),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Nutrition(),
+                          ),
+                        );
+                      },
                     ),
                     IconButton(
                       icon: Icon(Icons.bar_chart),
